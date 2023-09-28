@@ -23,7 +23,7 @@ lasso_flora_fun_s1 <- function(dataset, col_1, col_2, target) {
 
   # lasso回归
   xlasso <- normal_flora_dataset[, col_1:col_2]
-  ylasso <- normal_dataset[, target+1]  # 此处y为总胆固醇
+  ylasso <- normal_dataset[, target+1]
 
   set.seed(1245)
   lasso_testout <- cv.glmnet(xlasso, ylasso, alpha = 1, nfolds = 10)
@@ -64,7 +64,8 @@ loop_lasso_s1 <- function (flag_target) {
     }
 
   }
-}
+}   #该函数可对所有血脂筛选菌群
+
 
 repeat {
   print(lasso_flora_fun_s1(base,flag_lasso,flag_lasso+10,flag_target))
