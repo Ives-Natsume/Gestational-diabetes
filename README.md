@@ -1,5 +1,5 @@
 # Gestational-diabetes
-*This is a personal project, launched as a cloud storation*
+*This is a personal project, launched as a cloud disk*
 
 当云盘用的
 
